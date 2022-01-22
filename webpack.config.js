@@ -14,7 +14,8 @@ module.exports = {
         hot: true,
         inline: true,
         open: true,
-        contentBase: path.join(__dirname, 'public')
+        contentBase: path.join(__dirname, 'public'),
+        port: 3000
     },
     module: {
         rules: [
