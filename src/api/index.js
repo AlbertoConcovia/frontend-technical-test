@@ -10,30 +10,27 @@ import { request } from './helpers';
 
 export default async function getData() {
 
-const vehiclesResponse = await fetch('/api/vehicles.json').then((data) => data.json());
-  try {
-    const vehicleResponses = await Promise.all(
-      vehiclesResponse.map((element) => fetch(element.apiUrl)
-        .then((response) => response.json())
-        .catch((error) => ({ error })))
-    );
+  const allVehicles = await fetch('/api/vehicles.json').then((data) => data.json());
 
-    const newArrayBeforeFilter = vehiclesResponse.map((element, i) => (
+  try {
+    const vehicleDetails = await Promise.all(
+      allVehicles.map((vehicle) => 
+        fetch(vehicle.apiUrl)
+          .then((response) => response.json())
+          .catch((error) => ({ error }))
+      )
+    );
+    const newArrayBeforeFilter = allVehicles.map((element, i) => (
       {
         ...element,
-        price: vehicleResponses[i].price ? vehicleResponses[i].price : null,
-        description: vehicleResponses[i].description ? vehicleResponses[i].description : null,
+        price: vehicleDetails[i].price ? vehicleDetails[i].price : null,
+        description: vehicleDetails[i].description ? vehicleDetails[i].description : null,
       }
     ));
-
     const vPrice = [];
     newArrayBeforeFilter.forEach((key) => { if (key.price) vPrice.push(key); });
-
     return vPrice;
-
   } catch (error) {
     console.log(error);
   }
-
-
 }
