@@ -25,12 +25,15 @@ body {
   z-index: 12;
 }
 
-.vehicle__container {
+.vehiclelist__container {
   display: $vehicles__container--display;
   flex-wrap: $vehicles__container--flex-wrap;
   justify-content: $vehicles__container--justify-content;
   // margin: $vehicles--margin;
   background-color: $color--turquoise;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .vehicle {
@@ -57,21 +60,22 @@ body {
 
 /* ------------------------------ @media ------------------------------------------*/
 
-$vehicles--320--width: 100%;
-$vehicles--320--height: 100%;
-
-/* On screens that are 320px or more*/
-@media screen and (max-width: 320px) {
+$vehicles--992--width: 50%;
+$vehicles--992--height: 50%;
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
   .vehicle {
-    width: $vehicles--320--width;
-    height: $vehicles--320--height;
+    width: $vehicles--992--width;
+    height: $vehicles--992--height;
   }
 }
 
-/* On screens that are 700px or more*/
-@media screen and (max-width: 700px) {
+$vehicles--600--width: 100%;
+$vehicles--600--height: 100%;
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
   .vehicle {
-    width: $vehicles--320--width;
-    height: $vehicles--320--height;
+    width: $vehicles--600--width;
+    height: $vehicles--600--height;
   }
 }

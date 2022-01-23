@@ -6,7 +6,7 @@ body {
   z-index: 12;
 }
 
-.vehicle__container {
+.vehiclelist__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +15,10 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #b1cadb;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .vehicle {
@@ -30,16 +34,16 @@ body {
 }
 
 /* ------------------------------ @media ------------------------------------------*/
-/* On screens that are 320px or more*/
-@media screen and (max-width: 320px) {
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
   .vehicle {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
   }
 }
 
-/* On screens that are 700px or more*/
-@media screen and (max-width: 700px) {
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
   .vehicle {
     width: 100%;
     height: 100%;
