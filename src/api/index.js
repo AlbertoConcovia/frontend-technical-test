@@ -25,6 +25,7 @@ export default async function getData() {
         ...element,
         price: vehicleDetails[i].price ? vehicleDetails[i].price : null,
         description: vehicleDetails[i].description ? vehicleDetails[i].description : null,
+        meta: vehicleDetails[i].meta ? vehicleDetails[i].meta : null,
       }
     ));
     const vPrice = [];

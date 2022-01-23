@@ -1,12 +1,11 @@
 import React from 'react';
 import useData from './useData';
 import './style.scss';
+import Modal from '../Modal/Modal';
 
 export default function VehicleList() {
-  // eslint-disable-next-line no-unused-vars
+
   const [loading, error, vehicles] = useData();
-  // console.log(`index.js after vehicles ${JSON.stringify(vehicles)}`);
-  // const imgVehicle =  vehicles[0].media[0].url ;
 
   if (loading) {
     return <div data-testid="loading">Loading</div>;
@@ -23,18 +22,20 @@ export default function VehicleList() {
 
       <div data-testid="results" className="vehiclelist__container">
         {vehicles.map((e) => (
-          <div className="vehicle">
-            <div>
+          <div key={e.id} className="vehicle">
+            <div >
               <img
                 src={e.media[0].url}
                 alt="fpace_k17"
-                className="vehiclelist__img"
+                width="100%"
+                height="100%"
               />
             </div>
-            <div>
+           <div>
               <p> Price: {e.price} </p>
               <p> Description: {e.description}  </p>
             </div>
+            <Modal id={e.id} vehicle={e} />
           </div>
         ))}
       </div>

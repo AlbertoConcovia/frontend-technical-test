@@ -1,3 +1,73 @@
-.VehicleList {
-  width: 100%;
+
+$vehicles__container--display: flex;
+$vehicles__container--flex-wrap: wrap;
+$vehicles__container--justify-content: space-around;
+
+$vehicles--width: 100%;
+$vehicles--height: 100%;
+$vehicles--maxwidth: 240px;
+$vehicles--maxheight: 440px;
+
+$vehicles--margin: 1%;
+
+$border--radius: 25px;
+
+$color--turquoise: rgb(177, 202, 219);
+$color--white: white;
+$color--black: black;
+
+//************************************************************//
+
+body {
+  background-color: $color--black ;
+}
+
+.root {
+  z-index: 12;
+}
+
+.vehiclelist__container {
+  display: $vehicles__container--display;
+  flex-wrap: $vehicles__container--flex-wrap;
+  justify-content: $vehicles__container--justify-content;
+  // margin: $vehicles--margin;
+  background-color: $color--turquoise;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.vehicle {
+  // margin: $vehicles--margin;
+  // max-width: $vehicles--maxwidth;
+  // min-width: $vehicles--maxwidth;
+  // max-height: $vehicles--maxheight;
+  // min-height: $vehicles--maxheight;
+  // border-radius: $border--radius;
+  // text-align: center;
+  color: $color--black;
+  background-color: $color--white;
+  width: $vehicles--width;
+  height: $vehicles--height;
+}
+
+/* ------------------------------ @media ------------------------------------------*/
+$vehicles--600--width: 50%;
+$vehicles--600--height: 50%;
+/* min-width -->    On screens 600px wide or more*/
+@media screen and (min-width: 600px) {
+  .vehicle {
+    width: $vehicles--600--width;
+    height: $vehicles--600--height;
+  }
+}
+
+$vehicles--992--width:  25%;
+$vehicles--992--height: 25%;
+/* On screens that are 992px wide or more*/
+@media screen and (min-width: 992px) {
+  .vehicle {
+    width: $vehicles--992--width;
+    height: $vehicles--992--height;
+  }
 }
