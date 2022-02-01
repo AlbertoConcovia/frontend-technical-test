@@ -21,7 +21,7 @@ const Modal = ({id , vehicle}) => {
     <div > 
       <button id={btnId} onClick={btnOnclick}>Open Modal</button>
       <div id={modalId} className="modal"> 
-        <div className="modal-content">
+        <div className="modal__content">
           <span onClick={btnOnclose} className="close">&times;</span>
           <p>Passengers : {JSON.stringify(vehicle.meta.passengers)} </p>
           <p>Bodystyles : {JSON.stringify(vehicle.meta.bodystyles[0])} </p>

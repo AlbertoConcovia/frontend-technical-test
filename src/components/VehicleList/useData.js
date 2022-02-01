@@ -9,7 +9,6 @@ export default function useData() {
   useEffect(() => {
     getData()
       .then((response) => { 
-        // console.log(`response ${JSON.stringify(response) }`);
         setVehicles(response)})
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
