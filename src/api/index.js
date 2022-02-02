@@ -9,7 +9,7 @@ import { request } from './helpers';
 // TODO: All API related logic should be made inside this function.
 
 export default async function getData() {
-  const vPrice = [];
+  const allVehiclesDetails = [];
   try {
     const res = await fetch('/api/vehicles.json');
     const allVehicles = await res.json();
@@ -19,12 +19,12 @@ export default async function getData() {
         .then((response) => response.json())
         .then((details) => {
           const newArrayVehiclesDetails = { ...allVehicles[index], ...details, };
-          if (details.price) vPrice.push(newArrayVehiclesDetails);
+          if (details.price) allVehiclesDetails.push(newArrayVehiclesDetails);
         })
         .catch((error) => ({ error })))
     );
 
-    return vPrice;
+    return allVehiclesDetails;
   } catch (error) {
     console.log(error);
   }

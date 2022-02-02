@@ -1,4 +1,4 @@
-.vehicle {
+.vehicle__container {
   color: black;
   background-color: white;
   width: 100%;
@@ -8,7 +8,7 @@
 /* ------------------------------ @media ------------------------------------------*/
 /* min-width -->    On screens 600px wide or more*/
 @media screen and (min-width: 600px) {
-  .vehicle {
+  .vehicle__container {
     width: 50%;
     height: 50%;
   }
@@ -16,7 +16,7 @@
 
 /* min-width -->    On screens 992px wide or more*/
 @media screen and (min-width: 992px) {
-  .vehicle {
+  .vehicle__container {
     width: 25%;
     height: 100%;
   }

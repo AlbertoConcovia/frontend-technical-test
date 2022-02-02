@@ -11,7 +11,7 @@ $color--black: black;
 
 //************************************************************//
 
-.vehicle {
+.vehicle__container {
   color: $color--black;
   background-color: $color--white;
   width: $vehicles--width;
@@ -23,7 +23,7 @@ $vehicles--600--width: 50%;
 $vehicles--600--height: 50%;
 /* min-width -->    On screens 600px wide or more*/
 @media screen and (min-width: 600px) {
-  .vehicle {
+  .vehicle__container {
     width: $vehicles--600--width;
     height: $vehicles--600--height;
   }
@@ -34,7 +34,7 @@ $vehicles--992--height: 25%;
 $labels--992--min-height: 120px;
 /* min-width -->    On screens 992px wide or more*/
 @media screen and (min-width: 992px) {
-  .vehicle {
+  .vehicle__container {
     width: $vehicles--992--width;
     height: 100%;
   }

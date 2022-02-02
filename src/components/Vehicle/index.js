@@ -7,7 +7,7 @@ const Vehicle = ({ vehicle }) => {
 
 return (
 
-    <div data-testid="idVehicle" key={vehicle.id} className="vehicle">
+    <div data-testid="idVehicle" key={vehicle.id} className="vehicle__container">
         <VehicleImage vehicle={vehicle} />
         <div className="vehicle__labels">
             <p> Price: {vehicle.price} </p>
