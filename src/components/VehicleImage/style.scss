@@ -1,0 +1,24 @@
+
+$vehicleimage--width: 100%;
+$vehicleimage--height: 100%;
+$color--white: white;
+
+
+//************************************************************//
+
+.vehicleimage__container {
+  background-color: $color--white;
+  width: $vehicleimage--width;
+  height: $vehicleimage--height;
+}
+
+/* ------------------------------ @media ------------------------------------------*/
+/* min-width -->    On screens 600px wide or more*/
+@media screen and (min-width: 600px) {
+
+}
+
+/* min-width -->    On screens 992px wide or more*/
+@media screen and (min-width: 992px) {
+
+}

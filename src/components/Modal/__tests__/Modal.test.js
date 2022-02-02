@@ -19,7 +19,6 @@ describe('<Modal /> Tests', () => {
   });
 
   test('Modal - Given render Modal then labels Passengers should be rendered', () => {
-    console.log(`id ${id}`);
     render(<Modal id={id} vehicle={vehicle} />);
     const idPassengers = screen.getByLabelText('idPassengers');
     expect(idPassengers).toBeTruthy();

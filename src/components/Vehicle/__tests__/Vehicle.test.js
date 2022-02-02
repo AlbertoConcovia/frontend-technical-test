@@ -4,6 +4,12 @@ import Vehicle from '../index';
 
 describe('<Vehicle /> Tests', () => {
   const vehicle = {
+    id:1,
+    price: "£10",
+    description: "car",
+    media: [
+      { url: "/images/16x9/ipace_k21.jpg" }
+    ],
     meta: {
       passengers: 5,
       bodystyles: 'b',
