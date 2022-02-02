@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Modal from '../Modal';
+import Modal from '../index';
 
 describe('<Modal /> Tests', () => {
   const id = 1;

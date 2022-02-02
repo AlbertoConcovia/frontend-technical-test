@@ -7,7 +7,6 @@ $vehicles--width: 100%;
 $vehicles--height: 100%;
 $vehicles--maxwidth: 240px;
 $vehicles--maxheight: 440px;
-
 $vehicles--margin: 1%;
 
 $border--radius: 25px;
@@ -29,11 +28,10 @@ body {
   display: $vehicles__container--display;
   flex-wrap: $vehicles__container--flex-wrap;
   justify-content: $vehicles__container--justify-content;
-  // margin: $vehicles--margin;
+  margin-left: $vehicles--margin;
+  margin-right: $vehicles--margin;
+  margin-top: $vehicles--margin;
   background-color: $color--white;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
 }
 
 .vehicle {
@@ -56,10 +54,32 @@ $vehicles--600--height: 50%;
 
 $vehicles--992--width:  25%;
 $vehicles--992--height: 25%;
-/* On screens that are 992px wide or more*/
+/* min-width -->    On screens 992px wide or more*/
 @media screen and (min-width: 992px) {
+  
+  .vehiclelist__container {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: red;
+  }
+
   .vehicle {
     width: $vehicles--992--width;
-    height: $vehicles--992--height;
+    height: 100%;
+    background-color: blue;
   }
+
+  .labels {
+    background-color: green;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .vehiclelist__modal {
+    background-color: orange;
+    margin: 10px;
+    padding: 10px;
+  }
+
 }
