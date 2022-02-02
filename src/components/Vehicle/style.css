@@ -1,0 +1,31 @@
+.vehicle {
+  color: black;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------------------ @media ------------------------------------------*/
+/* min-width -->    On screens 600px wide or more*/
+@media screen and (min-width: 600px) {
+  .vehicle {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+/* min-width -->    On screens 992px wide or more*/
+@media screen and (min-width: 992px) {
+  .vehicle {
+    width: 25%;
+    height: 100%;
+  }
+  .vehicle__labels {
+    margin: 1%;
+    min-height: 120px;
+  }
+  .vehicle__modal {
+    margin-bottom: 2%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

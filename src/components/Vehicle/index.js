@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from '../Modal/index';
+import './style.scss';
 
 const Vehicle = ({ vehicle }) => {
 
@@ -14,12 +15,12 @@ return (
                 height="100%"
             />
         </div>
-        <div className="labels">
+        <div className="vehicle__labels">
             <p> Price: {vehicle.price} </p>
             <p> Description: {vehicle.description} </p>
         </div>
 
-        <div className="vehiclelist__modal">
+        <div className="vehicle__modal">
             <Modal id={vehicle.id} vehicle={vehicle} />
         </div>
     </div>
