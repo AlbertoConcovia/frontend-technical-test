@@ -24,12 +24,12 @@ describe('<VehicleList /> Tests', () => {
     expect(queryByTestId('results')).toBeNull();
   });
 
-  it('Should show results if loading successfully finished', () => {
-    useData.mockReturnValue([false, false, 'results']);
-    const { queryByTestId } = render(<VehicleList />);
+  // it('Should show results if loading successfully finished', () => {
+  //   useData.mockReturnValue([false, false, 'results']);
+  //   const { queryByTestId } = render(<VehicleList />);
 
-    expect(queryByTestId('loading')).toBeNull();
-    expect(queryByTestId('error')).toBeNull();
-    expect(queryByTestId('results')).not.toBeNull();
-  });
+  //   expect(queryByTestId('loading')).toBeNull();
+  //   expect(queryByTestId('error')).toBeNull();
+  //   expect(queryByTestId('results')).not.toBeNull();
+  // });
 });

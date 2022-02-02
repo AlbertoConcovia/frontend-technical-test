@@ -12,7 +12,6 @@ $vehicles--margin: 1%;
 
 $border--radius: 25px;
 
-$color--turquoise: rgb(177, 202, 219);
 $color--white: white;
 $color--black: black;
 
@@ -31,7 +30,7 @@ body {
   flex-wrap: $vehicles__container--flex-wrap;
   justify-content: $vehicles__container--justify-content;
   // margin: $vehicles--margin;
-  background-color: $color--turquoise;
+  background-color: $color--white;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
